@@ -6,10 +6,10 @@ const StyledHeader = styled.div`
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color: #ff8e20;
-  font-size: 3rem;
-  padding: 32px 20px;
-  font-weight: bold;
+  background-color: #f47800;
+  font-size: 2.5rem;
+  padding: 24px 10px;
+  font-weight: 900;
 `;
 
 const Header: React.FC = () => {
