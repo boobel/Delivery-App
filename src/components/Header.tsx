@@ -7,6 +7,9 @@ const StyledHeader = styled.div`
   justify-content: space-between;
   align-items: center;
   background-color: #ff8e20;
+  font-size: 3rem;
+  padding: 32px 20px;
+  font-weight: bold;
 `;
 
 const Header: React.FC = () => {
