@@ -1,0 +1,10 @@
+{
+  "meals": [
+    {
+        "name": "katsu curry"
+    },
+    {
+        "name": "pizza margherita"
+    }
+  ]
+}
