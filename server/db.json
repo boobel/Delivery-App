@@ -1,10 +1,44 @@
 {
   "meals": [
     {
-        "name": "katsu curry"
+      "name": "Pizza Margherita",
+      "description": "Thin crusted neapolitan pizza with marinara sauce",
+      "price": "14.99"
     },
     {
-        "name": "pizza margherita"
+      "name": "Cheeseburger",
+      "description": "120g beef patty with cheddar cheese, pickles and brioche bun",
+      "price": "9.99"
+    },
+    {
+      "name": "Pad Thai",
+      "description": "Stir fried rice noodes with veggies, eggs and authentic sauce",
+      "price": "24.99"
+    },
+    {
+      "name": "Shoyu Ramen",
+      "description": "Japanese noodle soup, with a combination of a rich flavoured broth, one of a variety of types of noodle and a selection of meats or vegetables, often topped with a boiled egg.",
+      "price": "19.99"
+    },
+    {
+      "name": "Katsu Curry",
+      "description": "Japanese dish consisting of a pork cutlet (tonkatsu) served with a portion of Japanese rice and curry",
+      "price": "29.99"
+    },
+    {
+      "name": "Pierogi",
+      "description": "Dumplings filled with minced beef. Served with carmelised onion.",
+      "price": "9.99"
+    },
+    {
+      "name": " Beef Udon",
+      "description": "thick Japanese noodles made of wheat flour, served with thinly sliced beef and stir fried veggies.",
+      "price": "39.99"
+    },
+    {
+      "name": "Butter Chicken",
+      "description": "Grilled chicken is simmered in a spicy, aromatic, buttery and creamy tomato gravy.",
+      "price": "24.99"
     }
   ]
 }
