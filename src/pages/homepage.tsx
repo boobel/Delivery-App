@@ -3,7 +3,28 @@ import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
-import banner from "../images/banner.jpg";
+import banner from "../assets/images/banner.jpg";
+
+const Home: React.FC = () => {
+  return (
+    <StyledWrapper>
+      <Header />
+      <StyledBanner>
+        <StyledBackdrop>
+          <StyledMotto>
+            <span>All your favorite foods</span>
+            <span>All here</span>
+            <span>All for your convenience</span>
+          </StyledMotto>
+          <Link to="/shop">
+            <StyledOrderBtn>Order Now</StyledOrderBtn>
+          </Link>
+        </StyledBackdrop>
+      </StyledBanner>
+      <Footer />
+    </StyledWrapper>
+  );
+};
 
 const StyledWrapper = styled.div`
   display: flex;
@@ -47,26 +68,5 @@ const StyledOrderBtn = styled.button`
   border-radius: 0.5rem;
   font-weight: 700;
 `;
-
-const Home: React.FC = () => {
-  return (
-    <StyledWrapper>
-      <Header />
-      <StyledBanner>
-        <StyledBackdrop>
-          <StyledMotto>
-            <span>All your favorite foods</span>
-            <span>All here</span>
-            <span>All for your convenience</span>
-          </StyledMotto>
-          <Link to="/shop">
-            <StyledOrderBtn>Order Now</StyledOrderBtn>
-          </Link>
-        </StyledBackdrop>
-      </StyledBanner>
-      <Footer />
-    </StyledWrapper>
-  );
-};
 
 export { Home };

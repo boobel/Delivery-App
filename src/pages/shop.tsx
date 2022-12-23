@@ -1,29 +1,31 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { fetchMeals } from "../api/fetchMeals";
 
 const StyledWrapper = styled.div``;
 
 const Shop: React.FC = () => {
+  const [result, setResult] = useState<resultProps[]>([]);
+
   useEffect(() => {
     /* //TODO JAKI ZWRACAĆ TYP W PROMISE */
-    const fetchMeals = async (): Promise<undefined> => {
-      try {
-        const data = await fetch("http://localhost:3000/meals");
-        const meals = await data.json();
-        console.log(meals);
-        return meals;
-      } catch (e) {
-        console.error(e);
-      }
-    };
-
-    void fetchMeals();
+    setResult(fetchMeals());
   }, []);
+
   return (
     <StyledWrapper>
       <Header />
+      <div>
+        {result.map((meal) => {
+          return (
+            <>
+              <span>{meal.name}</span>
+            </>
+          );
+        })}
+      </div>
       <Footer />
     </StyledWrapper>
   );
