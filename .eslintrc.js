@@ -6,7 +6,7 @@ module.exports = {
   extends: ["plugin:react/recommended", "standard-with-typescript", "prettier"],
   overrides: [
     {
-      files: ["*.ts", "*.tsx", "*.t.ts"],
+      files: ["*.ts", "*.tsx", "*.d.ts"],
     },
   ],
   parserOptions: {

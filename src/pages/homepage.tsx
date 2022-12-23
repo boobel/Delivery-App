@@ -1,4 +1,5 @@
-import React, { useEffect } from "react";
+import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
@@ -48,22 +49,6 @@ const StyledOrderBtn = styled.button`
 `;
 
 const Home: React.FC = () => {
-  useEffect(() => {
-    /* //TODO JAKI ZWRACAĆ TYP W PROMISE */
-    const fetchMeals = async (): Promise<undefined> => {
-      try {
-        const data = await fetch("http://localhost:3000/meals");
-        const meals = await data.json();
-        console.log(meals);
-        return meals;
-      } catch (e) {
-        console.error(e);
-      }
-    };
-
-    void fetchMeals();
-  }, []);
-
   return (
     <StyledWrapper>
       <Header />
@@ -74,7 +59,9 @@ const Home: React.FC = () => {
             <span>All here</span>
             <span>All for your convenience</span>
           </StyledMotto>
-          <StyledOrderBtn>Order Now</StyledOrderBtn>
+          <Link to="/shop">
+            <StyledOrderBtn>Order Now</StyledOrderBtn>
+          </Link>
         </StyledBackdrop>
       </StyledBanner>
       <Footer />
