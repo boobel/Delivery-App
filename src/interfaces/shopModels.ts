@@ -4,4 +4,8 @@ interface mealProps {
     price: string
 }
 
-export type {mealProps}
+interface filterProps {
+    filter: string
+}
+
+export type {mealProps, filterProps}

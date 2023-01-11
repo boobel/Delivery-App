@@ -7,6 +7,7 @@ import { fetchMeals } from "../api/fetchMeals";
 import { fetchFilters } from "../api/fetchFilters";
 import { mealProps } from "../interfaces/shopModels";
 import { Meal } from "../components/Meal";
+import { MealFilter } from "../components/MealFilter";
 
 const StyledWrapper = styled.div`
   height: 100vh;
@@ -16,6 +17,13 @@ const StyledMeals = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+`;
+
+const StyledFilters = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.5rem;
 `;
 
 const Shop: React.FC = () => {
@@ -29,13 +37,23 @@ const Shop: React.FC = () => {
     const getFilters = async () => {
       setFilterResult(await fetchFilters());
     };
-    getMeals();
     getFilters();
+
+    getMeals();
   }, []);
 
   return (
     <StyledWrapper>
       <Header />
+      <StyledFilters>
+        {filterResult.map((filter) => {
+          return (
+            <>
+              <MealFilter filter={filter} />
+            </>
+          );
+        })}
+      </StyledFilters>
       <StyledMeals>
         {mealResult.map((meal) => {
           return (
