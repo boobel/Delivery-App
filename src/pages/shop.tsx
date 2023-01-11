@@ -65,11 +65,13 @@ const Shop: React.FC = () => {
 
   //filtering function
   const filterMeals = (cuisine: string) => {
-    if (filteredMeals === mealResult) {
-      let newMeals = mealResult.filter((meal) => meal.cuisine == cuisine);
-      setFilteredMeals(newMeals);
-    } else {
+    if (cuisine === filteredMeals[0].cuisine) {
+      setCurrentPage(1);
       setFilteredMeals(mealResult);
+    } else {
+      setCurrentPage(1);
+      let newMeals = mealResult.filter((meal) => meal.cuisine === cuisine);
+      setFilteredMeals(newMeals);
     }
   };
 
@@ -106,7 +108,7 @@ const Shop: React.FC = () => {
 
         <Pagination
           postsPerPage={postsPerPage}
-          totalPosts={mealResult.length}
+          totalPosts={filteredMeals.length}
           paginate={paginate}
         />
         <Footer />
