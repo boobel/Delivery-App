@@ -15,9 +15,9 @@ const StyledHeader = styled.div`
 const Header: React.FC = () => {
   return (
     <StyledHeader>
-      <img placeholder="App Icon" />
+      <img alt="App Icon" />
       <span>Yummy</span>
-      <img placeholder="Cart Icon" />
+      <img alt="Cart Icon" />
     </StyledHeader>
   );
 };
