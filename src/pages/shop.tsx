@@ -14,14 +14,13 @@ import { Pagination } from "../components/Pagination";
 const StyledWrapper = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: space-between;
   height: 100%;
 `;
 
 const StyledMeals = styled.div`
   display: flex;
+  flex-grow: 1;
   flex-direction: column;
-  justify-content: space-between;
   align-items: space;
   gap: 2rem;
   margin: 0.75rem;
