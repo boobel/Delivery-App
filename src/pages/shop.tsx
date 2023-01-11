@@ -4,7 +4,8 @@ import uuid from "react-uuid";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { fetchMeals } from "../api/fetchMeals";
-import { resultProps } from "../interfaces/shopModels";
+import { fetchFilters } from "../api/fetchFilters";
+import { mealProps } from "../interfaces/shopModels";
 import { Meal } from "../components/Meal";
 
 const StyledWrapper = styled.div`
@@ -18,17 +19,25 @@ const StyledMeals = styled.div`
 `;
 
 const Shop: React.FC = () => {
-  const [result, setResult] = useState<resultProps[]>([]);
+  const [mealResult, setMealResult] = useState<mealProps[]>([]);
+  const [filterResult, setFilterResult] = useState<string[]>([]);
 
   useEffect(() => {
-    void fetchMeals(setResult);
+    const getMeals = async () => {
+      setMealResult(await fetchMeals());
+    };
+    const getFilters = async () => {
+      setFilterResult(await fetchFilters());
+    };
+    getMeals();
+    getFilters();
   }, []);
 
   return (
     <StyledWrapper>
       <Header />
       <StyledMeals>
-        {result.map((meal) => {
+        {mealResult.map((meal) => {
           return (
             <>
               <Meal
