@@ -1,8 +1,8 @@
 import React from "react";
 import styled from "styled-components";
-import { resultProps } from "../interfaces/shopModels";
+import { mealProps } from "../interfaces/shopModels";
 
-const Meal: React.FC<resultProps> = ({ name, description, price }) => {
+const Meal: React.FC<mealProps> = ({ name, description, price }) => {
   return (
     <StyledMeal>
       <StyledLeft>
