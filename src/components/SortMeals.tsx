@@ -5,8 +5,9 @@ import arrow from "../assets/images/sort_arrow.svg";
 const StyledSortButton = styled.button`
   background-color: var(--brand-400);
   display: flex;
-  flex-direction: row;
+  justify-content: center;
   align-items: center;
+  width: fit-content;
   gap: 0.5rem;
   color: white;
   border: none;

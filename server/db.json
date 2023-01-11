@@ -16,13 +16,13 @@
       "name": "Pad Thai",
       "description": "Stir fried rice noodes with veggies, eggs and authentic sauce",
       "price": "24.99",
-      "cuisine": "Vietnamese"
+      "cuisine": "Thai"
     },
     {
       "name": "Shoyu Ramen",
       "description": "Japanese noodle soup, with a combination of a rich flavoured broth, one of a variety of types of noodle and a selection of meats or vegetables, often topped with a boiled egg.",
       "price": "19.99",
-      "cuisine": "Japanse"
+      "cuisine": "Japanese"
     },
     {
       "name": "Katsu Curry",
@@ -55,28 +55,28 @@
       "cuisine": "Italian"
     },
     {
-      "name": "Pizza Funghi",
+      "name": "Hamburger",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
       "price": "12.99",
-      "cuisine": "Italian"
+      "cuisine": "American"
     },
     {
-      "name": "Pizza Funghi",
+      "name": "Tikka Masala",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
       "price": "12.99",
-      "cuisine": "Italian"
+      "cuisine": "Indian"
     },
     {
-      "name": "Pizza Funghi",
+      "name": "Pho",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
       "price": "12.99",
-      "cuisine": "Italian"
+      "cuisine": "Thai"
     },
     {
-      "name": "Pizza Funghi",
+      "name": "Barszcz czerwony",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
       "price": "12.99",
-      "cuisine": "Italian"
+      "cuisine": "Polish"
     },
     {
       "name": "Pizza Funghi",
@@ -97,12 +97,5 @@
       "cuisine": "Italian"
     }
   ],
-  "filters": [
-    "Italian",
-    "Japanese",
-    "American",
-    "Indian",
-    "Polish",
-    "Vietnamese"
-  ]
+  "filters": ["Italian", "Japanese", "American", "Indian", "Polish", "Thai"]
 }

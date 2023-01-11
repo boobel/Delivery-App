@@ -12,15 +12,19 @@ import { MealSort } from "../components/SortMeals";
 import { Pagination } from "../components/Pagination";
 
 const StyledWrapper = styled.div`
-  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 100%;
 `;
 
 const StyledMeals = styled.div`
   display: flex;
   flex-direction: column;
+  justify-content: space-between;
+  align-items: space;
   gap: 2rem;
   margin: 0.75rem;
-  margin-bottom: -40px;
 `;
 
 const StyledFilters = styled.div`
@@ -65,7 +69,12 @@ const Shop: React.FC = () => {
 
   //filtering function
   const filterMeals = (cuisine: string) => {
-    if (cuisine === filteredMeals[0].cuisine) {
+    console.log(cuisine);
+    console.log(filteredMeals);
+    if (
+      cuisine === filteredMeals[0].cuisine &&
+      filteredMeals[0].cuisine === filteredMeals[1].cuisine
+    ) {
       setCurrentPage(1);
       setFilteredMeals(mealResult);
     } else {
@@ -76,44 +85,42 @@ const Shop: React.FC = () => {
   };
 
   return (
-    <>
-      <StyledWrapper>
-        <Header />
-        <StyledFilters>
-          {filterResult.map((filter) => {
-            return (
-              <>
-                <MealFilter filter={filter} filterMeals={filterMeals} />
-              </>
-            );
-          })}
-        </StyledFilters>
-        <MealSort />
-        <StyledMeals>
-          {currentPosts.map((meal) => {
-            return (
-              <>
-                <Meal
-                  name={meal.name}
-                  description={meal.description}
-                  price={meal.price}
-                  cuisine={meal.cuisine}
-                  key={uuid()}
-                />
-              </>
-            );
-          })}
-        </StyledMeals>
-        <StyledPush />
+    <StyledWrapper>
+      <Header />
+      <StyledFilters>
+        {filterResult.map((filter) => {
+          return (
+            <>
+              <MealFilter filter={filter} filterMeals={filterMeals} />
+            </>
+          );
+        })}
+      </StyledFilters>
+      <MealSort />
+      <StyledMeals>
+        {currentPosts.map((meal) => {
+          return (
+            <>
+              <Meal
+                name={meal.name}
+                description={meal.description}
+                price={meal.price}
+                cuisine={meal.cuisine}
+                key={uuid()}
+              />
+            </>
+          );
+        })}
+      </StyledMeals>
+      <StyledPush />
 
-        <Pagination
-          postsPerPage={postsPerPage}
-          totalPosts={filteredMeals.length}
-          paginate={paginate}
-        />
-        <Footer />
-      </StyledWrapper>
-    </>
+      <Pagination
+        postsPerPage={postsPerPage}
+        totalPosts={filteredMeals.length}
+        paginate={paginate}
+      />
+      <Footer />
+    </StyledWrapper>
   );
 };
 
