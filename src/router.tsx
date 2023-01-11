@@ -7,7 +7,7 @@ import { Cart } from "./pages/cart";
 
 const Router: React.FC = () => {
   return (
-    <>
+    <div>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
@@ -16,7 +16,7 @@ const Router: React.FC = () => {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
-    </>
+    </div>
   );
 };
 

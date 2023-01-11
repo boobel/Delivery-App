@@ -10,8 +10,6 @@ interface filterProps {
     filterMeals: Function
 }
 
-
-
 interface paginationProps {
     postsPerPage: number;
     totalPosts: number;
