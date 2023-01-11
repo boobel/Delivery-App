@@ -40,5 +40,13 @@
       "description": "Grilled chicken is simmered in a spicy, aromatic, buttery and creamy tomato gravy.",
       "price": "24.99"
     }
+  ],
+  "filters": [
+    "Italian",
+    "Japanese",
+    "American",
+    "Indian",
+    "Polish",
+    "Vietnamese"
   ]
 }
