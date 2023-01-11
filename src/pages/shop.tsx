@@ -37,29 +37,40 @@ const StyledPush = styled.div`
 const Shop: React.FC = () => {
   const [mealResult, setMealResult] = useState<mealProps[]>([]);
   const [filterResult, setFilterResult] = useState<string[]>([]);
+  const [filteredMeals, setFilteredMeals] = useState<mealProps[]>([]);
   const [currentPage, setCurrentPage] = useState<number>(1);
   const [postsPerPage] = useState<number>(8);
 
   useEffect(() => {
     const getMeals = async () => {
       setMealResult(await fetchMeals());
+      setFilteredMeals(await fetchMeals());
     };
     const getFilters = async () => {
       setFilterResult(await fetchFilters());
     };
     getFilters();
-
     getMeals();
   }, []);
 
   //getting current page of posts
   const idxofLastPost = currentPage * postsPerPage;
   const idxofFirstPost = idxofLastPost - postsPerPage;
-  const currentPosts = mealResult.slice(idxofFirstPost, idxofLastPost);
+  const currentPosts = filteredMeals.slice(idxofFirstPost, idxofLastPost);
 
   //change page logic
   const paginate = (pageNumber: number) => {
     setCurrentPage(pageNumber);
+  };
+
+  //filtering function
+  const filterMeals = (cuisine: string) => {
+    if (filteredMeals === mealResult) {
+      let newMeals = mealResult.filter((meal) => meal.cuisine == cuisine);
+      setFilteredMeals(newMeals);
+    } else {
+      setFilteredMeals(mealResult);
+    }
   };
 
   return (
@@ -70,7 +81,7 @@ const Shop: React.FC = () => {
           {filterResult.map((filter) => {
             return (
               <>
-                <MealFilter filter={filter} />
+                <MealFilter filter={filter} filterMeals={filterMeals} />
               </>
             );
           })}
@@ -84,6 +95,7 @@ const Shop: React.FC = () => {
                   name={meal.name}
                   description={meal.description}
                   price={meal.price}
+                  cuisine={meal.cuisine}
                   key={uuid()}
                 />
               </>

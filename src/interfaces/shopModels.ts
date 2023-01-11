@@ -1,12 +1,16 @@
 interface mealProps {
     name: string;
     description: string;
-    price: string
+    price: string,
+    cuisine: string
 }
 
 interface filterProps {
-    filter: string
+    filter: string,
+    filterMeals: Function
 }
+
+
 
 interface paginationProps {
     postsPerPage: number;

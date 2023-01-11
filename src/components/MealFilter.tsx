@@ -10,8 +10,16 @@ const StyledButton = styled.button`
   padding: 5px 20px;
 `;
 
-const MealFilter: React.FC<filterProps> = ({ filter }) => {
-  return <StyledButton>{filter}</StyledButton>;
+const MealFilter: React.FC<filterProps> = ({ filter, filterMeals }) => {
+  return (
+    <StyledButton
+      onClick={() => {
+        filterMeals(filter);
+      }}
+    >
+      {filter}
+    </StyledButton>
+  );
 };
 
 export { MealFilter };
