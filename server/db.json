@@ -3,82 +3,98 @@
     {
       "name": "Pizza Margherita",
       "description": "Thin crusted neapolitan pizza with marinara sauce",
-      "price": "14.99"
+      "price": "14.99",
+      "cuisine": "Italian"
     },
     {
       "name": "Cheeseburger",
       "description": "120g beef patty with cheddar cheese, pickles and brioche bun",
-      "price": "9.99"
+      "price": "9.99",
+      "cuisine": "American"
     },
     {
       "name": "Pad Thai",
       "description": "Stir fried rice noodes with veggies, eggs and authentic sauce",
-      "price": "24.99"
+      "price": "24.99",
+      "cuisine": "vietnamese"
     },
     {
       "name": "Shoyu Ramen",
       "description": "Japanese noodle soup, with a combination of a rich flavoured broth, one of a variety of types of noodle and a selection of meats or vegetables, often topped with a boiled egg.",
-      "price": "19.99"
+      "price": "19.99",
+      "cuisine": "Japanse"
     },
     {
       "name": "Katsu Curry",
       "description": "Japanese dish consisting of a pork cutlet (tonkatsu) served with a portion of Japanese rice and curry",
-      "price": "29.99"
+      "price": "29.99",
+      "cuisine": "Japanse"
     },
     {
       "name": "Pierogi",
       "description": "Dumplings filled with minced beef. Served with carmelised onion.",
-      "price": "9.99"
+      "price": "9.99",
+      "cuisine": "Polish"
     },
     {
       "name": " Beef Udon",
       "description": "thick Japanese noodles made of wheat flour, served with thinly sliced beef and stir fried veggies.",
-      "price": "39.99"
+      "price": "39.99",
+      "cuisine": "Japanese"
     },
     {
       "name": "Butter Chicken",
       "description": "Grilled chicken is simmered in a spicy, aromatic, buttery and creamy tomato gravy.",
-      "price": "24.99"
+      "price": "24.99",
+      "cuisine": "Indian"
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99"
+      "price": "12.99",
+      "cuisine": "Italian"
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99"
+      "price": "12.99",
+      "cuisine": "Italian"
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99"
+      "price": "12.99",
+      "cuisine": "Italian"
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99"
+      "price": "12.99",
+      "cuisine": "Italian"
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99"
+      "price": "12.99",
+      "cuisine": "Italian"
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99"
+      "price": "12.99",
+      "cuisine": "Italian"
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99"
+      "price": "12.99",
+      "cuisine": "Italian"
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99"
+      "price": "12.99",
+      "cuisine": "Italian"
     }
   ],
   "filters": [
