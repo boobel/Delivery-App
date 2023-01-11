@@ -1,4 +1,5 @@
 import React from "react";
+import { Link } from "react-router-dom";
 import styled from "styled-components";
 import cart from "../assets/images/cart.svg";
 import logo from "../assets/images/logo.svg";
@@ -15,15 +16,19 @@ const StyledHeader = styled.div`
 `;
 
 const StyledImage = styled.img`
-  height: 100px;
+  height: 75px;
 `;
 
 const Header: React.FC = () => {
   return (
     <StyledHeader>
-      <StyledImage alt="App Icon" src={logo} />
+      <Link to="/">
+        <StyledImage alt="App Icon" src={logo} />
+      </Link>
       <span>Yummy</span>
-      <StyledImage alt="Cart Icon" src={cart} />
+      <Link to="/cart">
+        <StyledImage alt="Cart Icon" src={cart} />
+      </Link>
     </StyledHeader>
   );
 };
