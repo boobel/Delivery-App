@@ -35,7 +35,7 @@ const StyledName = styled.span`
 `;
 
 const StyledDescription = styled.span`
-  width: 50vw;
+  width: 80vw;
 `;
 
 const StyledRight = styled.div`

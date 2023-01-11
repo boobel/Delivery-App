@@ -2,11 +2,10 @@ import React from "react";
 import styled from "styled-components";
 
 const StyledFooter = styled.div`
-  display: flex;
-  justify-content: center;
-  align-items: center;
   background-color: #9b9b9b;
-  padding: 10px;
+  height: 40px;
+  text-align: center;
+  line-height: 40px;
 `;
 
 const Footer: React.FC = () => {

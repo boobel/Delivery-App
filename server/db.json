@@ -39,6 +39,26 @@
       "name": "Butter Chicken",
       "description": "Grilled chicken is simmered in a spicy, aromatic, buttery and creamy tomato gravy.",
       "price": "24.99"
+    },
+    {
+      "name": "Pizza Funghi",
+      "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
+      "price": "12.99"
+    },
+    {
+      "name": "Pizza Funghi",
+      "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
+      "price": "12.99"
+    },
+    {
+      "name": "Pizza Funghi",
+      "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
+      "price": "12.99"
+    },
+    {
+      "name": "Pizza Funghi",
+      "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
+      "price": "12.99"
     }
   ],
   "filters": [

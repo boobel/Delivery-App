@@ -8,4 +8,11 @@ interface filterProps {
     filter: string
 }
 
-export type {mealProps, filterProps}
+interface paginationProps {
+    postsPerPage: number;
+    totalPosts: number;
+    paginate: Function;
+
+}
+
+export type {mealProps, filterProps, paginationProps}
