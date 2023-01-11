@@ -8,6 +8,7 @@ import { fetchFilters } from "../api/fetchFilters";
 import { mealProps } from "../interfaces/shopModels";
 import { Meal } from "../components/Meal";
 import { MealFilter } from "../components/MealFilter";
+import { MealSort } from "../components/SortMeals";
 
 const StyledWrapper = styled.div`
   height: 100vh;
@@ -17,6 +18,7 @@ const StyledMeals = styled.div`
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  margin: 0.75rem;
 `;
 
 const StyledFilters = styled.div`
@@ -54,6 +56,7 @@ const Shop: React.FC = () => {
           );
         })}
       </StyledFilters>
+      <MealSort />
       <StyledMeals>
         {mealResult.map((meal) => {
           return (

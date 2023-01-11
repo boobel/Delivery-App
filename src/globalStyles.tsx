@@ -6,6 +6,7 @@ const GlobalStyle = createGlobalStyle`
     padding: 0;
     font-family: 'Inter', sans-serif;
     --brand-100: #ffba4f;
+    --brand-400: #f47800;
   }
 `;
 
