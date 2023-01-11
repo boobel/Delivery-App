@@ -11,7 +11,12 @@ const StyledPagination = styled.div`
   margin-bottom: 1rem;
 `;
 
-const StyledPageButton = styled.button``;
+const StyledPageButton = styled.button`
+  background: none;
+  border: none;
+  font-size: 125%;
+  font-weight: 400;
+`;
 
 const Pagination: React.FC<paginationProps> = ({
   postsPerPage,
