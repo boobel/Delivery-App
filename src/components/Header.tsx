@@ -1,5 +1,7 @@
 import React from "react";
 import styled from "styled-components";
+import cart from "../assets/images/cart.svg";
+import logo from "../assets/images/logo.svg";
 
 const StyledHeader = styled.div`
   display: flex;
@@ -12,12 +14,16 @@ const StyledHeader = styled.div`
   font-weight: 900;
 `;
 
+const StyledImage = styled.img`
+  height: 100px;
+`;
+
 const Header: React.FC = () => {
   return (
     <StyledHeader>
-      <img alt="App Icon" />
+      <StyledImage alt="App Icon" src={logo} />
       <span>Yummy</span>
-      <img alt="Cart Icon" />
+      <StyledImage alt="Cart Icon" src={cart} />
     </StyledHeader>
   );
 };
