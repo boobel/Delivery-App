@@ -12,11 +12,14 @@ const StyledHeader = styled.div`
   background-color: #f47800;
   font-size: 2.5rem;
   padding: 24px 10px;
-  font-weight: 900;
 `;
 
 const StyledImage = styled.img`
   height: 75px;
+`;
+
+const StyledHeaderText = styled.div`
+  font-weight: 900;
 `;
 
 const Header: React.FC = () => {
@@ -25,7 +28,7 @@ const Header: React.FC = () => {
       <Link to="/">
         <StyledImage alt="App Icon" src={logo} />
       </Link>
-      <span>Yummy</span>
+      <StyledHeaderText>Yummy</StyledHeaderText>
       <Link to="/cart">
         <StyledImage alt="Cart Icon" src={cart} />
       </Link>
