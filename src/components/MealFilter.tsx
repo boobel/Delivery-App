@@ -8,6 +8,7 @@ const StyledButton = styled.button`
   color: var(--brand-100);
   border-radius: 37px;
   padding: 5px 20px;
+  cursor: pointer;
 `;
 
 const MealFilter: React.FC<filterProps> = ({ filter, filterMeals }) => {

@@ -3,98 +3,114 @@
     {
       "name": "Pizza Margherita",
       "description": "Thin crusted neapolitan pizza with marinara sauce",
-      "price": "14.99",
-      "cuisine": "Italian"
+      "price": 14.99,
+      "cuisine": "Italian",
+      "id": 1
     },
     {
       "name": "Cheeseburger",
       "description": "120g beef patty with cheddar cheese, pickles and brioche bun",
-      "price": "9.99",
-      "cuisine": "American"
+      "price": 9.99,
+      "cuisine": "American",
+      "id": 2
     },
     {
       "name": "Pad Thai",
       "description": "Stir fried rice noodes with veggies, eggs and authentic sauce",
-      "price": "24.99",
-      "cuisine": "Thai"
+      "price": 24.99,
+      "cuisine": "Thai",
+      "id": 3
     },
     {
       "name": "Shoyu Ramen",
       "description": "Japanese noodle soup, with a combination of a rich flavoured broth, one of a variety of types of noodle and a selection of meats or vegetables, often topped with a boiled egg.",
-      "price": "19.99",
-      "cuisine": "Japanese"
+      "price": 19.99,
+      "cuisine": "Japanese",
+      "id": 4
     },
     {
       "name": "Katsu Curry",
       "description": "Japanese dish consisting of a pork cutlet (tonkatsu) served with a portion of Japanese rice and curry",
-      "price": "29.99",
-      "cuisine": "Japanse"
+      "price": 29.99,
+      "cuisine": "Japanse",
+      "id": 5
     },
     {
       "name": "Pierogi",
       "description": "Dumplings filled with minced beef. Served with carmelised onion.",
-      "price": "9.99",
-      "cuisine": "Polish"
+      "price": 9.99,
+      "cuisine": "Polish",
+      "id": 6
     },
     {
       "name": " Beef Udon",
       "description": "thick Japanese noodles made of wheat flour, served with thinly sliced beef and stir fried veggies.",
-      "price": "39.99",
-      "cuisine": "Japanese"
+      "price": 39.99,
+      "cuisine": "Japanese",
+      "id": 7
     },
     {
       "name": "Butter Chicken",
       "description": "Grilled chicken is simmered in a spicy, aromatic, buttery and creamy tomato gravy.",
-      "price": "24.99",
-      "cuisine": "Indian"
+      "price": 24.99,
+      "cuisine": "Indian",
+      "id": 8
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99",
-      "cuisine": "Italian"
+      "price": 12.99,
+      "cuisine": "Italian",
+      "id": 9
     },
     {
       "name": "Hamburger",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99",
-      "cuisine": "American"
+      "price": 12.99,
+      "cuisine": "American",
+      "id": 10
     },
     {
       "name": "Tikka Masala",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99",
-      "cuisine": "Indian"
+      "price": 12.99,
+      "cuisine": "Indian",
+      "id": 11
     },
     {
       "name": "Pho",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99",
-      "cuisine": "Thai"
+      "price": 12.99,
+      "cuisine": "Thai",
+      "id": 12
     },
     {
       "name": "Barszcz czerwony",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99",
-      "cuisine": "Polish"
+      "price": 12.99,
+      "cuisine": "Polish",
+      "id": 13
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99",
-      "cuisine": "Italian"
+      "price": 12.99,
+      "cuisine": "Italian",
+      "id": 14
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99",
-      "cuisine": "Italian"
+      "price": 12.99,
+      "cuisine": "Italian",
+      "id": 15
     },
     {
       "name": "Pizza Funghi",
       "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": "12.99",
-      "cuisine": "Italian"
+      "price": 12.99,
+      "cuisine": "Italian",
+      "id": 16
     }
   ],
   "filters": ["Italian", "Japanese", "American", "Indian", "Polish", "Thai"]

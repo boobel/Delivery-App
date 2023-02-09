@@ -4,10 +4,11 @@ import GlobalStyle from "./globalStyles";
 import { Home } from "./pages/homepage";
 import { Shop } from "./pages/shop";
 import { Cart } from "./pages/cart";
+import { ShoppingCartProvider } from "./context/CartContext";
 
 const Router: React.FC = () => {
   return (
-    <div>
+    <ShoppingCartProvider>
       <GlobalStyle />
       <BrowserRouter>
         <Routes>
@@ -16,7 +17,7 @@ const Router: React.FC = () => {
           <Route path="/cart" element={<Cart />} />
         </Routes>
       </BrowserRouter>
-    </div>
+    </ShoppingCartProvider>
   );
 };
 

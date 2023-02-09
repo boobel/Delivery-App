@@ -11,32 +11,6 @@ import { MealFilter } from "../components/MealFilter";
 import { MealSort } from "../components/SortMeals";
 import { Pagination } from "../components/Pagination";
 
-const StyledWrapper = styled.div`
-  display: flex;
-  flex-direction: column;
-  height: 100%;
-`;
-
-const StyledMeals = styled.div`
-  display: flex;
-  flex-grow: 1;
-  flex-direction: column;
-  align-items: space;
-  gap: 2rem;
-  margin: 0.75rem;
-`;
-
-const StyledFilters = styled.div`
-  display: flex;
-  flex-direction: row;
-  gap: 1rem;
-  padding: 0.5rem;
-`;
-
-const StyledPush = styled.div`
-  height: 60px;
-`;
-
 const Shop: React.FC = () => {
   const [mealResult, setMealResult] = useState<mealProps[]>([]);
   const [filterResult, setFilterResult] = useState<string[]>([]);
@@ -106,6 +80,7 @@ const Shop: React.FC = () => {
                 price={meal.price}
                 cuisine={meal.cuisine}
                 key={uuid()}
+                id={meal.id}
               />
             </>
           );
@@ -122,5 +97,31 @@ const Shop: React.FC = () => {
     </StyledWrapper>
   );
 };
+
+const StyledWrapper = styled.div`
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+`;
+
+const StyledMeals = styled.div`
+  display: flex;
+  flex-grow: 1;
+  flex-direction: column;
+  align-items: space;
+  gap: 2rem;
+  margin: 0.75rem;
+`;
+
+const StyledFilters = styled.div`
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  padding: 0.5rem;
+`;
+
+const StyledPush = styled.div`
+  height: 60px;
+`;
 
 export { Shop };

@@ -1,8 +1,10 @@
 import React from "react";
 import styled from "styled-components";
+import { useShoppingCart } from "../context/CartContext";
 import { mealProps } from "../interfaces/shopModels";
 
-const Meal: React.FC<mealProps> = ({ name, description, price }) => {
+const Meal: React.FC<mealProps> = ({ id, name, description, price }) => {
+  const { addToCart } = useShoppingCart();
   return (
     <StyledMeal>
       <StyledLeft>
@@ -11,7 +13,14 @@ const Meal: React.FC<mealProps> = ({ name, description, price }) => {
       </StyledLeft>
       <StyledRight>
         <StyledPrice>${price}</StyledPrice>
-        <StyledOrderBtn>Order Now</StyledOrderBtn>
+        <StyledOrderBtn
+          onClick={() => {
+            console.log(id);
+            addToCart(id, name, price);
+          }}
+        >
+          Order Now
+        </StyledOrderBtn>
       </StyledRight>
     </StyledMeal>
   );

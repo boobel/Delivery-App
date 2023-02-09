@@ -1,8 +1,16 @@
 interface mealProps {
     name: string;
     description: string;
-    price: string,
-    cuisine: string
+    price: number,
+    cuisine: string,
+    id: number
+}
+
+interface cartMealProps {
+    name: string;
+    price: number;
+    id: number;
+    count: number;
 }
 
 interface filterProps {
@@ -14,7 +22,6 @@ interface paginationProps {
     postsPerPage: number;
     totalPosts: number;
     paginate: Function;
-
 }
 
-export type {mealProps, filterProps, paginationProps}
+export type {mealProps, filterProps, paginationProps, cartMealProps}
