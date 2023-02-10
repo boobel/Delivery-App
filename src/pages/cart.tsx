@@ -49,7 +49,9 @@ const FilledCart: React.FC = () => {
       </StyledMeals>
       <>
         <StyledTotal>Total:{getCartTotal()} </StyledTotal>
-        <StyledButton>Proceed To Checkout</StyledButton>
+        <Link to="/checkout">
+          <StyledButton>Proceed To Checkout</StyledButton>
+        </Link>
       </>
     </StyledFilledCart>
   );
@@ -78,7 +80,6 @@ const StyledWrapper = styled.div`
 
 const StyledMeals = styled.div`
   display: flex;
-  flex-grow: 1;
   flex-direction: column;
   justify-content: space-between;
   flex-grow: 1;
