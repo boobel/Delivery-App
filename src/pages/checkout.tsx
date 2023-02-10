@@ -2,6 +2,7 @@ import React from "react";
 import styled from "styled-components";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
+import { Link } from "react-router-dom";
 
 const Checkout: React.FC = () => {
   return (
@@ -46,7 +47,9 @@ const Checkout: React.FC = () => {
             <input></input>
           </StyledItem>
         </StyledGrid>
-        <StyledButton>Proceed To Payment</StyledButton>
+        <Link to="/payment">
+          <StyledButton>Proceed To Payment</StyledButton>
+        </Link>
       </StyledForm>
       <Footer />
     </StyledWrapper>

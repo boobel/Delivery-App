@@ -10,6 +10,7 @@ interface ShoppingCartContext {
   getItemCount: (id: number) => number;
   removeFromCart: (id: number) => void;
   addToCart: (id: number, name: string, price: number) => void;
+  getCartTotal: () => number;
   cartItems: CartItem[];
 }
 
@@ -31,6 +32,15 @@ const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) => {
 
   const getItemCount = (id: number) => {
     return cartItems.find((item) => item.id === id)?.count || 0;
+  };
+
+  const getCartTotal = () => {
+    let sum: number = cartItems
+      .map((a) => Math.round(a.price * a.count * 100) / 100)
+      .reduce(function (a, b) {
+        return a + b;
+      });
+    return sum;
   };
 
   const addToCart = (id: number, name: string, price: number) => {
@@ -68,7 +78,13 @@ const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) => {
 
   return (
     <ShoppingCartContext.Provider
-      value={{ getItemCount, addToCart, removeFromCart, cartItems }}
+      value={{
+        getItemCount,
+        addToCart,
+        removeFromCart,
+        cartItems,
+        getCartTotal,
+      }}
     >
       {children}
     </ShoppingCartContext.Provider>

@@ -21,16 +21,7 @@ const EmptyCart: React.FC = () => {
 };
 
 const FilledCart: React.FC = () => {
-  const { cartItems } = useShoppingCart();
-
-  const getCartTotal = () => {
-    let sum: number = cartItems
-      .map((a) => a.price * a.count)
-      .reduce(function (a, b) {
-        return a + b;
-      });
-    return sum;
-  };
+  const { cartItems, getCartTotal } = useShoppingCart();
 
   return (
     <StyledFilledCart>
@@ -48,7 +39,7 @@ const FilledCart: React.FC = () => {
         })}
       </StyledMeals>
       <>
-        <StyledTotal>Total:{getCartTotal()} </StyledTotal>
+        <StyledTotal>Total: ${getCartTotal()} </StyledTotal>
         <Link to="/checkout">
           <StyledButton>Proceed To Checkout</StyledButton>
         </Link>
@@ -82,9 +73,12 @@ const StyledMeals = styled.div`
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  align-items: center;
   flex-grow: 1;
   gap: 2rem;
   margin: 0.75rem;
+  margin-top: 5rem;
+  margin-bottom: 5rem;
 `;
 
 const StyledCart = styled.div`
@@ -93,6 +87,7 @@ const StyledCart = styled.div`
   align-items: center;
   height: 100%;
   flex-grow: 1;
+  margin-bottom: 5rem;
 `;
 
 const StyledFilledCart = styled.div`

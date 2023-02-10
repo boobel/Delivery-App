@@ -28,7 +28,7 @@ const CartMeal: React.FC<cartMealProps> = ({ name, price, count, id }) => {
             +
           </button>
         </StyledCount>
-        <StyledPrice>${price * count}</StyledPrice>
+        <StyledPrice>${Math.round(price * count * 100) / 100}</StyledPrice>
       </StyledRight>
     </StyledMeal>
   );
