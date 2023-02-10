@@ -33,7 +33,7 @@ const Shop: React.FC = () => {
   //getting current page of posts
   const idxofLastPost = currentPage * postsPerPage;
   const idxofFirstPost = idxofLastPost - postsPerPage;
-  const currentPosts = filteredMeals.slice(idxofFirstPost, idxofLastPost);
+  let currentPosts = filteredMeals.slice(idxofFirstPost, idxofLastPost);
 
   //change page logic
   const paginate = (pageNumber: number) => {
@@ -42,7 +42,6 @@ const Shop: React.FC = () => {
 
   //filtering function
   const filterMeals = (cuisine: string) => {
-    console.log(cuisine);
     console.log(filteredMeals);
     if (
       cuisine === filteredMeals[0].cuisine &&
@@ -57,19 +56,49 @@ const Shop: React.FC = () => {
     }
   };
 
+  //sorting logic
+  const sortPriceAsc = () => {
+    let newMeals = [...filteredMeals].sort((a: mealProps, b: mealProps) => {
+      return a.price - b.price;
+    });
+    setFilteredMeals(newMeals);
+  };
+
+  const sortPriceDesc = () => {
+    let newMeals = [...filteredMeals]
+      .sort((a: mealProps, b: mealProps) => {
+        return a.price - b.price;
+      })
+      .reverse();
+    setFilteredMeals(newMeals);
+  };
+
+  const sortAlphabetically = () => {
+    let newMeals = [...filteredMeals].sort((a: mealProps, b: mealProps) => {
+      return a.name.localeCompare(b.name);
+    });
+    setFilteredMeals(newMeals);
+  };
+
   return (
     <StyledWrapper>
       <Header />
       <StyledFilters>
         {filterResult.map((filter) => {
           return (
-            <>
-              <MealFilter filter={filter} filterMeals={filterMeals} />
-            </>
+            <MealFilter
+              filter={filter}
+              filterMeals={filterMeals}
+              key={uuid()}
+            />
           );
         })}
       </StyledFilters>
-      <MealSort />
+      <MealSort
+        sortPriceAsc={sortPriceAsc}
+        sortPriceDesc={sortPriceDesc}
+        sortAlphabetically={sortAlphabetically}
+      />
       <StyledMeals>
         {currentPosts.map((meal) => {
           return (

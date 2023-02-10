@@ -24,4 +24,21 @@ interface paginationProps {
     paginate: Function;
 }
 
-export type {mealProps, filterProps, paginationProps, cartMealProps}
+interface MenuProps {
+    isOpen: boolean;
+    sortPriceAsc: Function;
+    sortPriceDesc: Function
+    sortAlphabetically: Function
+}
+
+interface SortProps {
+    sortPriceAsc: Function;
+    sortPriceDesc: Function
+    sortAlphabetically: Function
+}
+
+interface SortArrow {
+    isOpen: boolean
+}
+
+export type {mealProps, filterProps, paginationProps, cartMealProps, MenuProps, SortProps, SortArrow}
