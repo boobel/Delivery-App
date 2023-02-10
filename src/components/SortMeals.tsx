@@ -86,12 +86,14 @@ const StyledList = styled.ul`
 const StyledItem = styled.li`
   padding-bottom: 0.75rem;
   font-weight: 500;
+  cursor: pointer;
 `;
 
 const StyledButtonContent = styled.div`
   display: inline-flex;
   text-align: center;
   gap: 0.5rem;
+  cursor: pointer;
 `;
 
 const StyledSortButton = styled.button`
@@ -111,6 +113,7 @@ const StyledSortButton = styled.button`
 `;
 
 const StyledArrow = styled.img<SortArrow>`
+  scale: 0.9;
   height: 30px;
   rotate: ${(props) => (props.isOpen ? "0deg" : "-90deg")};
 `;
