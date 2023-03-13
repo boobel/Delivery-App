@@ -1,10 +1,24 @@
-import React from "react";
+import React, { useState } from "react";
 import styled from "styled-components";
 import { Header } from "../components/Header";
 import { Footer } from "../components/Footer";
 import { Link } from "react-router-dom";
+import { postOrder } from "../api/postOrder";
+import { OrderData } from "../interfaces/shopModels";
 
 const Checkout: React.FC = () => {
+  const [currentOrder, SetCurrentOrder] = useState<OrderData>({})
+
+  const handleInput = (e: any) => {
+    SetCurrentOrder({
+      ...currentOrder,
+      [e.target.name]: e.target.value
+    }
+    )
+    console.log(currentOrder)
+  }
+
+
   return (
     <StyledWrapper>
       <Header />
@@ -13,42 +27,66 @@ const Checkout: React.FC = () => {
         <StyledGrid>
           <StyledItem>
             <span>Name</span>
-            <input></input>
+            <input
+            name="Name"
+            onChange={handleInput}
+            />
           </StyledItem>
           <StyledItem>
             <span>Surname</span>
-            <input></input>
+            <input
+            name="Surname"
+            onChange={handleInput}
+            />
           </StyledItem>
           <StyledItem>
             <span>Email</span>
-            <input></input>
-          </StyledItem>
+            <input
+            name="Email"
+            onChange={handleInput}
+            />        
+            </StyledItem>
           <StyledItem>
             <span>Address</span>
-            <input></input>
-          </StyledItem>
+            <input
+            name="Address"
+            onChange={handleInput}
+            />          
+            </StyledItem>
         </StyledGrid>
         <StyledHeader> Delivery Adress</StyledHeader>
         <StyledGrid>
           <StyledItem>
             <span>Street</span>
-            <input></input>
-          </StyledItem>
+            <input
+            name="Street"
+            onChange={handleInput}
+            />               
+            </StyledItem>
           <StyledItem>
             <span>Building Number</span>
-            <input></input>
-          </StyledItem>
+            <input
+            name="BuildingNumber"
+            onChange={handleInput}
+            />               
+            </StyledItem>
           <StyledItem>
             <span>City</span>
-            <input></input>
-          </StyledItem>
+            <input
+            name="City"
+            onChange={handleInput}
+            />     
+            </StyledItem>
           <StyledItem>
             <span>Postal Code</span>
-            <input></input>
-          </StyledItem>
+            <input
+            name="Postal"
+            onChange={handleInput}
+            />               
+            </StyledItem>
         </StyledGrid>
         <Link to="/payment">
-          <StyledButton>Proceed To Payment</StyledButton>
+          <StyledButton onClick={()=>{postOrder(currentOrder)}}>Proceed To Payment</StyledButton>
         </Link>
       </StyledForm>
       <Footer />

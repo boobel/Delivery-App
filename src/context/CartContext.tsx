@@ -11,6 +11,7 @@ interface ShoppingCartContext {
   removeFromCart: (id: number) => void;
   addToCart: (id: number, name: string, price: number) => void;
   getCartTotal: () => number;
+  getItemsTotal: () => number;
   cartItems: CartItem[];
 }
 
@@ -29,6 +30,14 @@ const ShoppingCartContext = createContext({} as ShoppingCartContext);
 
 const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) => {
   const [cartItems, setCartItems] = useState<CartItem[]>([]);
+
+  const getItemsTotal = () => {
+    let number = 0;
+    for(let item of cartItems) {
+      number += item.count
+    }
+    return number
+  }
 
   const getItemCount = (id: number) => {
     return cartItems.find((item) => item.id === id)?.count || 0;
@@ -84,6 +93,7 @@ const ShoppingCartProvider = ({ children }: ShoppingCartProviderProps) => {
         removeFromCart,
         cartItems,
         getCartTotal,
+        getItemsTotal
       }}
     >
       {children}

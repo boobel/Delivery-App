@@ -41,4 +41,8 @@ interface SortArrow {
     isOpen: boolean
 }
 
-export type {mealProps, filterProps, paginationProps, cartMealProps, MenuProps, SortProps, SortArrow}
+interface OrderData {
+    [name: string]: string,
+}
+
+export type {mealProps, filterProps, paginationProps, cartMealProps, MenuProps, SortProps, SortArrow, OrderData}

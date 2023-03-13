@@ -86,32 +86,37 @@
     },
     {
       "name": "Barszcz czerwony",
-      "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
+      "description": "Red beet soup with mushroom dumplings",
       "price": 12.99,
       "cuisine": "Polish",
       "id": 13
-    },
-    {
-      "name": "Pizza Funghi",
-      "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": 12.99,
-      "cuisine": "Italian",
-      "id": 14
-    },
-    {
-      "name": "Pizza Funghi",
-      "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": 12.99,
-      "cuisine": "Italian",
-      "id": 15
-    },
-    {
-      "name": "Pizza Funghi",
-      "description": "Thin crusted neapolitan pizza with marinara sauce and mushrooms",
-      "price": 12.99,
-      "cuisine": "Italian",
-      "id": 16
     }
   ],
-  "filters": ["Italian", "Japanese", "American", "Indian", "Polish", "Thai"]
+  "filters": [
+    "Italian",
+    "Japanese",
+    "American",
+    "Indian",
+    "Polish",
+    "Thai"
+  ],
+  "orders": [
+    {
+      "id": 1
+    },
+    {
+      "id": 2
+    },
+    {
+      "Name": "1",
+      "Surname": "2",
+      "Email": "3",
+      "Address": "4",
+      "Street": "5",
+      "BuildingNumber": "6",
+      "City": "7",
+      "Postal": "8",
+      "id": 3
+    }
+  ]
 }
